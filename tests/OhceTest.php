@@ -7,14 +7,24 @@ use PHPUnit\Framework\TestCase;
 
 class OhceTest extends TestCase
 {
+    private Ohce $ohce;
+
+    /**
+     * @setup
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->ohce = new Ohce();
+    }
+
     /**
      * @test
      */
     public function ohceGivenWordReturnsWordReversed()
     {
-        $ohce = new Ohce();
-
-        $responseMessage = $ohce->execute("hola");
+        $responseMessage = $this->ohce->execute("hola");
 
         self::assertEquals("aloh", $responseMessage);
     }
@@ -24,9 +34,7 @@ class OhceTest extends TestCase
      */
     public function ohceGivenPalindromeWordReturnsWordReversedAndBonitaPalabraMessage()
     {
-        $ohce = new Ohce();
-
-        $responseMessage = $ohce->execute("oto");
+        $responseMessage = $this->ohce->execute("oto");
 
         self::assertEquals("oto, ¡Bonita palabra!", $responseMessage);
     }
@@ -36,9 +44,7 @@ class OhceTest extends TestCase
      */
     public function ohceGivenStopReturnsAdiosMessage()
     {
-        $ohce = new Ohce();
-
-        $responseMessage = $ohce->execute("Stop!");
+        $responseMessage = $this->ohce->execute("Stop!");
 
         self::assertEquals("Adios", $responseMessage);
     }

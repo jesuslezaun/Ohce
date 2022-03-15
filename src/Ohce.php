@@ -12,9 +12,10 @@ class Ohce
         if($inputString === "Stop!")
             return "Adios";
 
-        $responseMessage = strrev($inputString);
-        if($responseMessage === $inputString)
-            $responseMessage .= ", ¡Bonita palabra!";
-        return $responseMessage;
+        $reversedWord = strrev($inputString);
+        if($reversedWord === $inputString)
+            return $reversedWord . ", ¡Bonita palabra!";
+
+        return $reversedWord;
     }
 }
