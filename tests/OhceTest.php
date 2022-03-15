@@ -18,4 +18,16 @@ class OhceTest extends TestCase
 
         self::assertEquals("aloh", $responseMessage);
     }
+
+    /**
+     * @test
+     */
+    public function ohceGivenPalindromeWordReturnsWordReversedAndBonitaPalabraMessage()
+    {
+        $ohce = new Ohce();
+
+        $responseMessage = $ohce->execute("oto");
+
+        self::assertEquals("oto, ¡Bonita palabra!", $responseMessage);
+    }
 }
