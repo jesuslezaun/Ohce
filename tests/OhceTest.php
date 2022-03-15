@@ -30,4 +30,16 @@ class OhceTest extends TestCase
 
         self::assertEquals("oto, ¡Bonita palabra!", $responseMessage);
     }
+
+    /**
+     * @test
+     */
+    public function ohceGivenStopReturnsAdiosMessage()
+    {
+        $ohce = new Ohce();
+
+        $responseMessage = $ohce->execute("Stop!");
+
+        self::assertEquals("Adios", $responseMessage);
+    }
 }

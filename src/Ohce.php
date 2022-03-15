@@ -9,6 +9,9 @@ class Ohce
 
     public function execute(string $inputString): string
     {
+        if($inputString === "Stop!")
+            return "Adios";
+
         $responseMessage = strrev($inputString);
         if($responseMessage === $inputString)
             $responseMessage .= ", ¡Bonita palabra!";
