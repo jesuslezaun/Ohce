@@ -22,6 +22,7 @@ class Ohce
             $this->name = substr($inputString,
                 strpos($inputString, " ") + 1,
                 strlen($inputString) - strpos($inputString, " ") + 1);
+
             if(6 < $hour && $hour < 12)
                 return "¡Buenos dias " . $this->name . "!";
             elseif(12 < $hour && $hour < 20)
