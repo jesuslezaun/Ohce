@@ -12,7 +12,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenWordReturnsWordReversed()
+    public function givenWordReturnsWordReversed()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -25,7 +25,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenPalindromeWordReturnsWordReversedAndBonitaPalabraMessage()
+    public function givenPalindromeWordReturnsWordReversedAndBonitaPalabraMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -38,7 +38,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenStopReturnsAdiosMessage()
+    public function givenStopReturnsAdiosMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -51,7 +51,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceHavingNameGivenStopReturnsAdiosNameMessage()
+    public function havingNameGivenStopReturnsAdiosNameMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -70,7 +70,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenOhceNameBetween20And6ReturnsBuenasNochesNameMessage()
+    public function givenOhceNameBetween20And6ReturnsBuenasNochesNameMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -87,7 +87,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenOhceNameBetween6And12ReturnsBuenosDiasNameMessage()
+    public function givenOhceNameBetween6And12ReturnsBuenosDiasNameMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
@@ -104,7 +104,7 @@ class OhceTest extends TestCase
     /**
      * @test
      */
-    public function ohceGivenOhceNameBetween12And20ReturnsBuenasTardesNameMessage()
+    public function givenOhceNameBetween12And20ReturnsBuenasTardesNameMessage()
     {
         $timeManager = Mockery::mock(TimeManager::class);
         $ohce = new Ohce($timeManager);
