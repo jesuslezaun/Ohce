@@ -1,4 +1,5 @@
 grumphp:
+    ascii: ~
     tasks:
         phpunit:
             config_file: null
