@@ -22,3 +22,6 @@ jobs:
 
     - name: Run unit tests
       run: composer run-script test
+
+    - name: Run grumphp
+      run: composer run-script grumphp
