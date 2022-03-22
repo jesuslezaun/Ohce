@@ -1,2 +1,5 @@
 grumphp:
-    tasks: { phpunit: null }
+    tasks:
+        phpunit:
+            config_file: null
+            always_execute: true
