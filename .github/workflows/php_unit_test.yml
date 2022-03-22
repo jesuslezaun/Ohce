@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHP Unit Tests
 
 on:
   push:
@@ -22,8 +22,3 @@ jobs:
 
     - name: Run unit tests
       run: composer run-script test
-
-  GrumPhp:
-  
-    - name: Run GrumPhp
-      run: ./vendor/bin/grumphp run
